@@ -1,10 +1,14 @@
 {
-  "name": "paypaylnvpservice",
-  "version": "0.1.0",
-  "description": "Service to invoke paypal nvp",
-  "main": "index.js",
+  "name": "paypalec.js",
+  "version": "0.1.2",
+  "description": "Service to invoke paypal nvp for express checkout",
+  "main": "PaypalService.js",
   "scripts": {
     "test": "./test/test.js"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/auridevil/paypalec.js"
   },
   "engines": {
     "node": ">=4.3.0"
