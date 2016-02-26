@@ -1,0 +1,37 @@
+{
+  "name": "paypaylnvpservice",
+  "version": "0.1.0",
+  "description": "Service to invoke paypal nvp",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test/test.js"
+  },
+  "engines": {
+    "node": ">=4.3.0"
+  },
+  "keywords": [
+    "paypal",
+    "nvp",
+    "nodejs"
+  ],
+  "author": "Aureliano Bergese",
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "chai": "^3.5.0",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^0.1.13",
+    "load-grunt-tasks": "^3.4.0",
+    "mocha": "^2.4.5",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.69.0",
+    "underscore": "^1.8.3"
+  }
+}
