@@ -10,7 +10,7 @@ The easiest installation is through [NPM](http://npmjs.org):
 
     npm install paypalec.js
     
-Or clone the repo https://github.com/auridevil/paypalec.js and include the `./PaypalService.js` script.
+Or clone the repo https://github.com/auridevil/paypalec.js and include the `./PaypalService` script.
 
 API
 ===
