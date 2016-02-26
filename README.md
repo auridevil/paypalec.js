@@ -90,6 +90,11 @@ Contributions
 
 If you find bugs or want to change functionality, feel free to fork and pull request.
 
+Notes
+=====
+
+The library use the es6 language, please make sure you node version supports it (we currently used 4.3.1).
+
 
 
 <i>Cheers from digitalx.</i>
