@@ -1,7 +1,7 @@
 paypalec.js
 =================
 
-Library for Paypal Express Checkout for Node.js
+(Yet Another) Library for Paypal Express Checkout for Node.js
 
 Installation
 ============
@@ -38,7 +38,7 @@ Get Details:
     paypalEC.askExpressCheckoutDetails(<TRANSACTIONID>,{},
         function onOk(err,res) {
             if(!err)
-                console.log(JSON.stringify(service.objectify(res)));
+                console.log(JSON.stringify(paypalEC.objectify(res)));
         });
         
 Do ExpressCheckout Payment:
@@ -51,7 +51,7 @@ Do ExpressCheckout Payment:
         {<extraOptions},
         function onOk(err,res) {
             if(!err)
-                console.log(JSON.stringify(service.objectify(res)));
+                console.log(JSON.stringify(paypalEC.objectify(res)));
         });
         
 Do Capture:
@@ -63,7 +63,7 @@ Do Capture:
         {<extraOptions},
         function onOk(err,res) {
             if(!err)
-                console.log(JSON.stringify(service.objectify(res)));
+                console.log(JSON.stringify(paypalEC.objectify(res)));
         });
 
 Do Void:
@@ -73,7 +73,7 @@ Do Void:
         {<extraOptions},
         function onOk(err,res) {
             if(!err)
-                console.log(JSON.stringify(service.objectify(res)));
+                console.log(JSON.stringify(paypalEC.objectify(res)));
         });
 
 Docs
