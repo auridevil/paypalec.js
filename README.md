@@ -1,4 +1,3 @@
-# paypalec.js
 paypalec.js
 =================
 
