@@ -17,7 +17,7 @@ API
 
 Initialize:
     
-    var PaypalService = require('./PaypalService');
+    var PaypalService = require('paypalec.js');
     var paypalEC = new PaypalService('USER','PWD','SIGNATURE',isProduction);
     
 Ask Authorization:
@@ -93,7 +93,7 @@ If you find bugs or want to change functionality, feel free to fork and pull req
 Notes
 =====
 
-The library use the es6 language, please make sure you node version supports it (we currently used 4.3.1).
+The library use the es6 language, please make sure your node version supports it (we currently used 4.3.1).
 
 
 
