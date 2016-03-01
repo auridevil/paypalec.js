@@ -35,7 +35,7 @@ Ask Authorization:
         
 Get Details:
 
-    paypalEC.askExpressCheckoutDetails(<TRANSACTIONID>,{},
+    paypalEC.askExpressCheckoutDetails(<TOKEN>,{},
         function onOk(err,res) {
             if(!err)
                 console.log(JSON.stringify(paypalEC.objectify(res)));
@@ -44,7 +44,7 @@ Get Details:
 Do ExpressCheckout Payment:
 
     paypalEC.doExpressCheckoutPayment(
-        <TRANSACTIONID>,
+        <TOKEN>,
         <PAYERID>,
         <AMOUNT>,
         <CURRENCYCODE>,
