@@ -4,10 +4,11 @@
  */
 
 'use strict';
-var MODULE_NAME = 'PaypalService';
-var querystring = require('querystring');
-var request = require('request');
-var underscore = require('underscore');
+const MODULE_NAME = 'PaypalService';
+const querystring = require('querystring');
+const request = require('request');
+const underscore = require('underscore');
+const assert = require('assert');
 
 // Paypal Sandbox API host
 var SANDBOX_API_HOST    = process.env.PAYPAL_SANDBOX_API_HOST || 'https://api-3t.sandbox.paypal.com/nvp';
@@ -35,18 +36,9 @@ class PaypalService{
      */
     constructor(username,password,signature,production){
 
-        // api username is required
-        if ( typeof username === 'undefined' ) {
-            throw new Error(MODULE_NAME + ': API Username is required' );
-        }
-        // api password is required
-        if ( typeof password === 'undefined' ) {
-            throw new Error(MODULE_NAME + ': API Password is required' );
-        }
-        // api signature is required
-        if ( typeof signature === 'undefined' ) {
-            throw new Error(MODULE_NAME + ': API Signature is required' );
-        }
+        assert(username,MODULE_NAME + ': API Username is required');
+        assert(password,MODULE_NAME + ': API password is required');
+        assert(signature,MODULE_NAME + ': API signature is required');
 
         // init
         this.user = username;
@@ -66,22 +58,10 @@ class PaypalService{
      */
     askAuthorization(amount,currencycode,cancelUrl,returnUrl,options,onComplete){
 
-        // validate amount
-        if(!amount || underscore.isNaN(amount) || amount<=0){
-            throw new Error(MODULE_NAME + ': Numeric amount is required' );
-        }
-        // validate currencycode
-        if(typeof currencycode === 'undefined'){
-            throw new Error(MODULE_NAME + ': Currencycode is required' );
-        }
-        // validate cancelUrl
-        if(typeof cancelUrl === 'undefined'){
-            throw new Error(MODULE_NAME + ': cancelUrl is required' );
-        }
-        // validate returnUrl
-        if(typeof returnUrl === 'undefined'){
-            throw new Error(MODULE_NAME + ': returnUrl is required' );
-        }
+        assert(amount,MODULE_NAME + ': Numeric amount is required');
+        assert(currencycode,MODULE_NAME + ': currencycode is required' );
+        assert(cancelUrl,MODULE_NAME + ': cancelUrl is required');
+        assert(returnUrl,MODULE_NAME + ': returnUrl is required')
 
         // create option
         var opt = {
@@ -110,9 +90,7 @@ class PaypalService{
     askExpressCheckoutDetails(token,options,onComplete){
 
         // validate token
-        if(typeof token === 'undefined'){
-            throw new Error(MODULE_NAME + ': Token is required' );
-        }
+        assert(token,MODULE_NAME + ': Token is required');
 
         var opt = {
             'TOKEN':token
@@ -138,22 +116,10 @@ class PaypalService{
      */
     doExpressCheckoutPayment(token,payerid,amount,currencycode,options,onComplete){
 
-        // validate token
-        if(typeof token === 'undefined'){
-            throw new Error(MODULE_NAME + ': Token is required' );
-        }
-        // validate payerid
-        if(typeof payerid === 'undefined'){
-            throw new Error(MODULE_NAME + ': payerid is required' );
-        }
-        // validate amount
-        if(!amount || underscore.isNaN(amount) || amount<=0){
-            throw new Error(MODULE_NAME + ': Numeric amount is required' );
-        }
-        // validate currencycode
-        if(typeof currencycode === 'undefined'){
-            throw new Error(MODULE_NAME + ': Currencycode is required' );
-        }
+        assert(token,MODULE_NAME + ': Token is required');
+        assert(payerid,MODULE_NAME + ': payer id is required' );
+        assert(amount,MODULE_NAME + ': Numeric amount is required');
+        assert(currencycode,MODULE_NAME + ': currencycode is required' );
 
         var opt = {
             'PAYMENTREQUEST_0_PAYMENTACTION':'Authorization',
@@ -182,18 +148,9 @@ class PaypalService{
      */
     doCapture(transationID,amount,currencycode,options,onComplete){
 
-        // validate transationID
-        if(typeof transationID === 'undefined'){
-            throw new Error(MODULE_NAME + ': transationID is required' );
-        }
-        // validate amount
-        if(!amount || underscore.isNaN(amount) || amount<=0){
-            throw new Error(MODULE_NAME + ': Numeric amount is required' );
-        }
-        // validate currencycode
-        if(typeof currencycode === 'undefined'){
-            throw new Error(MODULE_NAME + ': Currencycode is required' );
-        }
+        assert(transationID,MODULE_NAME + ': transation ID is required' );
+        assert(amount,MODULE_NAME + ': Numeric amount is required');
+        assert(currencycode,MODULE_NAME + ': currencycode is required' );
 
         var opt = {
             'COMPLETETYPE':'Complete',
@@ -219,10 +176,7 @@ class PaypalService{
      */
     doVoid(transationID,options,onComplete){
 
-        // validate transationID
-        if(typeof transationID === 'undefined'){
-            throw new Error(MODULE_NAME + ': transationID is required' );
-        }
+        assert(transationID,MODULE_NAME + ': transation ID is required' );
 
         var opt = {
             'AUTHORIZATIONID':transationID

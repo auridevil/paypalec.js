@@ -4,7 +4,7 @@
   "description": "Service to invoke paypal nvp for express checkout",
   "main": "PaypalService.js",
   "scripts": {
-    "test": "./test/test.js"
+    "test": "mocha"
   },
   "repository" :
   { "type" : "git"
