@@ -1,6 +1,6 @@
 {
   "name": "paypalec.js",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Service to invoke paypal nvp for express checkout",
   "main": "PaypalService.js",
   "scripts": {

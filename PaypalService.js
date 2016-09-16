@@ -15,7 +15,7 @@ var SANDBOX_API_HOST    = process.env.PAYPAL_SANDBOX_API_HOST || 'https://api-3t
 // Paypal Production API host
 var PRODUCTION_API_HOST = process.env.PAYPAL_PRODUCTION_API_HOST || 'https://api-3t.paypal.com/nvp';
 // Paypal API version
-var API_VERSION         = process.env.PAYPAL_API_VERSION || '109.0';
+var API_VERSION         = process.env.PAYPAL_API_VERSION || '204.0';
 // Paypal Sandbox Payment host
 var SANDBOX_PAY_URL     = process.env.PAYPAL_SANDBOX_PAY_HOST || 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=';
 // Paypal Production Payment host
