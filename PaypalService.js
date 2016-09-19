@@ -61,7 +61,7 @@ class PaypalService{
         assert(amount,MODULE_NAME + ': Numeric amount is required');
         assert(currencycode,MODULE_NAME + ': currencycode is required' );
         assert(cancelUrl,MODULE_NAME + ': cancelUrl is required');
-        assert(returnUrl,MODULE_NAME + ': returnUrl is required')
+        assert(returnUrl,MODULE_NAME + ': returnUrl is required');
 
         // create option
         var opt = {
@@ -70,6 +70,9 @@ class PaypalService{
             'PAYMENTREQUEST_0_CURRENCYCODE':currencycode,
             cancelUrl,
             returnUrl,
+            user: this.user,
+            pwd: this.pwd,
+            signature: this.signature
         };
 
         // merge with additional option
