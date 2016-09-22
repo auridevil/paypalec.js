@@ -292,8 +292,8 @@ class PaypalService{
         var contentLength = formData.length;
 
 
-        console.debug(MODULE_NAME + ' req on ', this.paypalUrl);
-        console.debug(MODULE_NAME + ' body ', require('util').inspect(formData));
+        console.log(MODULE_NAME + ' req on ', this.paypalUrl);
+        console.log(MODULE_NAME + ' body ', require('util').inspect(formData));
 
         request({
             headers: {
