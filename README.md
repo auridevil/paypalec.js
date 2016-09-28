@@ -1,4 +1,6 @@
-paypalec.js [![Build Status](https://travis-ci.org/auridevil/paypalec.js.svg?branch=master)](https://travis-ci.org/auridevil/paypalec.js) [![NPM](https://nodei.co/npm/paypalec.js.png)](https://npmjs.org/package/paypalec.js)
+paypalec.js 
+[![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url] [![Build Status][travis-image]][travis-url]
+[![Build Status](https://travis-ci.org/auridevil/paypalec.js.svg?branch=master)](https://travis-ci.org/auridevil/paypalec.js) [![NPM](https://nodei.co/npm/paypalec.js.png)](https://npmjs.org/package/paypalec.js)
 
 =================
 (Yet Another) Library for Paypal Express Checkout for Node.js
